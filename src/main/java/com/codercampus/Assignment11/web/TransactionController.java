@@ -22,15 +22,23 @@ public class TransactionController {
 		
 		List<Transaction> transactions = transactionService.findAll();
 		
+		System.out.println(transactions);
+				
 		model.put("transactions", transactions);
 		
         return "transactions";
     }
 	
 	@GetMapping("/transaction/{id}")
-    public String getTransaction(@PathVariable Long id) {
+    public String getTransaction(@PathVariable Long id, ModelMap model) {
+		
+		Transaction transaction = transactionService.findById(id);
+		
+		model.put("transaction", transaction);
 		
         return "transaction";
     }
+	
+	
 
 }
