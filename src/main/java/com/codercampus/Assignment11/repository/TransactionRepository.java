@@ -23,8 +23,8 @@ public class TransactionRepository {
 
 	public List<Transaction> findAll() {
 
-		// sort all transactions by date in descending order using streams
-		return transactions.stream().sorted(Comparator.comparing(Transaction::getDate).reversed()).collect(Collectors.toList());
+		// sort all transactions by date in ascending order using streams
+		return transactions.stream().sorted(Comparator.comparing(Transaction::getDate)).collect(Collectors.toList());
 	
 	}
 
