@@ -13,7 +13,7 @@
 		</div>
 			
 		<div>
-			<span>Amount: </span><span th:text="${transaction.type == 'D' ? '-' + transaction.amount : transaction.amount}"></span>
+			<span>Amount: </span><span th:text="${transaction.type == 'C' ? '-' + transaction.amount : transaction.amount}"></span>
 		</div>
 		
 		<div>
